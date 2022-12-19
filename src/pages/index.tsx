@@ -1,10 +1,15 @@
-import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import background from "../assets/background.svg";
 import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <Box>
+      <Head>
+        <title>Workyoum | Home</title>
+      </Head>
       <Flex p="6" display="flex" align="center" justifyContent="center">
         <Text fontWeight="medium" fontSize="4xl" mt="20" position="absolute">
           Get several connections for jobs around the world
@@ -29,17 +34,19 @@ export default function Home() {
           is a new way to make connections and provide experiences between developers and customers.
         </Text>
 
-        <Button
-          bgColor="green.400"
-          color="white"
-          w="xs"
-          h={12}
-          mt="8"
-          _hover={{ bgColor: "green.500" }}
-          onClick={() => {}}
-        >
-          Experience now
-        </Button>
+        <Link href="/users/register">
+          <Button
+            bgColor="green.400"
+            color="white"
+            w="xs"
+            h={12}
+            mt="8"
+            _hover={{ bgColor: "green.500" }}
+            onClick={() => {}}
+          >
+            Experience now
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );
