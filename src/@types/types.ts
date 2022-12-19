@@ -3,3 +3,8 @@ export interface UserRegister {
   password: string;
   password_confirmation: string;
 }
+
+export interface UserDataSignIn {
+  email: string;
+  password: string;
+}

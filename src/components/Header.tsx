@@ -6,7 +6,7 @@ const Header = () => {
     <Flex
       width="100vw"
       height={100}
-      bgColor="green.500"
+      bgColor="green.400"
       p="4"
       align="center"
       justifyContent="space-between"
@@ -19,13 +19,13 @@ const Header = () => {
         </Link>
       </Flex>
       <Flex display="flex" gap={2}>
-        <Link href="/users/register">
-          <Button bgColor="green.400" color="white">
+        <Link href="/users/create">
+          <Button bgColor="green.300" color="white" _hover={{ bgColor: "green.500" }}>
             Register
           </Button>
         </Link>
-        <Link href="/signin">
-          <Button bgColor="green.400" color="white">
+        <Link href="/users/signin">
+          <Button bgColor="green.300" color="white" _hover={{ bgColor: "green.500" }}>
             Sign In
           </Button>
         </Link>

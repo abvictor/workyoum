@@ -1,5 +1,4 @@
 import { Box, Button, Flex, FormControl, FormLabel, Stack, Text } from "@chakra-ui/react";
-import React from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "../Input/Input";
@@ -28,17 +27,18 @@ const RegisterForm = () => {
   };
 
   return (
-    <Box mt={12}>
+    <Box>
       <Stack
         w={500}
-        h={400}
-        bgColor="green.200"
-        display="flex"
-        flexDir="column"
+        h={350}
+        bgColor="green.400"
         alignItems="center"
         justifyContent="center"
         borderRadius={8}
       >
+        <Text fontSize="2xl" fontWeight="medium">
+          Registration
+        </Text>
         <FormControl
           as="form"
           display="flex"
@@ -76,10 +76,11 @@ const RegisterForm = () => {
           </FormLabel>
           <Button
             color="white"
-            bgColor="green.400"
-            mt="6"
+            bgColor="green.300"
+            mt="4"
             type="submit"
             isLoading={formState.isSubmitting}
+            _hover={{ bgColor: "green.500" }}
           >
             Create account
           </Button>
