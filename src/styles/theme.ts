@@ -32,11 +32,8 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "white",
-        color: "#000",
-        button: {
-          hover: "green.500",
-        },
+        bg: "gray.700",
+        color: "white",
       },
     },
   },

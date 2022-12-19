@@ -11,7 +11,7 @@ export default function Home() {
         <title>Workyoum | Home</title>
       </Head>
       <Flex p="6" display="flex" align="center" justifyContent="center">
-        <Text fontWeight="medium" fontSize="4xl" mt="20" position="absolute">
+        <Text fontWeight="semibold" fontSize="4xl" mt="20" position="absolute">
           Get several connections for jobs around the world
         </Text>
       </Flex>
@@ -20,12 +20,13 @@ export default function Home() {
         <Image
           src={background}
           alt="World map with connections between countries"
+          style={{ opacity: 0.7 }}
           width={800}
           height={1060}
         />
       </Flex>
       <Flex display="flex" flexDir="column" align="center" mt={-54}>
-        <Text color="green.400" fontSize="6xl" fontWeight="medium" letterSpacing={1}>
+        <Text color="green.400" fontSize="6xl" fontWeight="semibold" letterSpacing={1}>
           Workyoum
         </Text>
       </Flex>
@@ -38,7 +39,7 @@ export default function Home() {
           <Button
             bgColor="green.400"
             color="white"
-            w="xs"
+            w="md"
             h={12}
             mt="8"
             _hover={{ bgColor: "green.500" }}
