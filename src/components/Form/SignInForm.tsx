@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormControl, FormLabel, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, FormLabel, Stack, Text, Link } from "@chakra-ui/react";
 import React from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -21,12 +21,13 @@ const SignInForm = () => {
   };
   return (
     <Box
-      w={500}
-      h={320}
+      maxWidth={[380, 500]}
       bgColor="green.400"
+      filled
       display="flex"
       justifyContent="center"
       borderRadius="8"
+      p="4"
     >
       <FormControl
         as="form"
@@ -36,10 +37,11 @@ const SignInForm = () => {
       >
         <Stack>
           <Flex display="flex" align="center" justifyContent="center" mt="4">
-            <Text fontSize="2xl" fontWeight="medium">
+            <Text fontSize={["2xl", "3xl"]} fontWeight="medium">
               Sign in
             </Text>
           </Flex>
+          <hr style={{ opacity: 0.5 }} />
           <FormLabel>User e-mail</FormLabel>
           <Input
             type="email"
@@ -54,13 +56,14 @@ const SignInForm = () => {
             error={formState.errors.password}
             {...register("password")}
           />
+          <Link href="/users/passwordrecovery">Forgot you password? We can help you here!</Link>
           <Flex display="flex" justifyContent="center">
             <Button
               bgColor="green.300"
               _hover={{ bgColor: "green.600" }}
-              mt="4"
               isLoading={formState.isSubmitting}
               type="submit"
+              mt={["0", "8"]}
             >
               Enter
             </Button>
